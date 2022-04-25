@@ -18,6 +18,7 @@ data = [x for y in list(json.load(open('cities.json')).values()) for x in y]
 
 selected_city = st.selectbox("Select a city", data)
 loaded = load_data(selected_city)['main']
-st.write(loaded)
 st.session_state.ls[selected_city] = loaded
-st.table(st.session_state.ls[selected_city])
+st.write(loaded)
+
+st.table(st.session_state.ls)
