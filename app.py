@@ -12,7 +12,7 @@ if 'ls' not in st.session_state:
 	
 @st.cache
 def load_data(city):
-    return requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=APIKEYHERE&units=imperial").json()
+    return requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=c5b4fbf9aaaa4bac56566ff54253c658&units=imperial").json()
 
 data = [x for y in list(json.load(open('cities.json')).values()) for x in y]
 
